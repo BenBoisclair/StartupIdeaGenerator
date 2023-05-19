@@ -2,26 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+#background-wrap {
+  bottom: 0;
+  left: 0;
+  padding-top: 50px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  background-image: url('../app/images/background.svg');
+  background-size: cover;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@keyframes animateCloud {
+  0%{margin-left: -1000px;}
+  100%{margin-left: 100%;}
+}
+
+.cloud_1 {
+  animation: animateCloud 35s linear infinite;
+  transform: scale(0.30);
+}
+
+.cloud_2 {
+  animation: animateCloud 30s linear infinite;
+  transform: scale(0.5);
+}
+
+.cloud_3 {
+  animation: animateCloud 18s linear infinite;
+  transform: scale(0.35);
+}
+
+.cloud_4 {
+  animation: animateCloud 25s linear infinite;
+  transform: scale(0.55);
+}
+
+.cloud_5 {
+  animation: animateCloud 29s linear infinite;
+  transform: scale(0.45);
+}
+
+.moon {
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 8px 5px rgba(0,0,0,0.1);
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  opacity: 40%;
+  right: 75px;
+  top: 75px;
+}
+
+.cloud {
+  background: white;
+  border-radius: 100px;
+  box-shadow: 0 8px 5px rgba(0,0,0,0.1);
+  height: 40px;
+  position: relative;
+  width: 380px;
+  opacity: 40%;
+}
+
+@media (min-width: 64em) and (max-width : 120em){
+  .moon {
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 8px 5px rgba(0,0,0,0.1);
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    opacity: 40%;
+    right: 100px;
+    top: 100px;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
 }
