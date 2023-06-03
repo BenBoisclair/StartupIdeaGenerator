@@ -1,7 +1,7 @@
 import './globals.css'
-import { Inter, Poppins, Pridi } from 'next/font/google'
-
-import Provider from '../components/QueryProvider'
+import { Providers } from './GlobalRedux/provider'
+import { Inter } from 'next/font/google'
+import Background from '@/components/Background'
 
 const inter = Inter({ subsets: ['latin'] })
 // const poppins = Poppins({ weight: "400" });
@@ -20,9 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Provider>
-          {children}
-        </Provider>
+          <Providers>
+            <div className='w-screen h-screen overflow-hidden flex justify-center items-center'>
+            <Background />
+            {children}
+            </div>
+          </Providers> 
       </body>
     </html>
   )

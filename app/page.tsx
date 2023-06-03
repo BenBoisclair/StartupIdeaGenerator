@@ -1,35 +1,24 @@
 'use client'
 
+import Pagination from "@/components/Pagination";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import Link from "next/link";
+
+
 export default function Home() {
-  return (
-    <div className='w-screen h-screen overflow-hidden'>
-      <div id="background-wrap">
-
-        <div className="moon"></div>
-
-        <div className="cloud_1">
-          <div className="cloud"></div>
+    return (
+        <div className="hero min-h-screen text-white">
+            <div className="hero-content text-center">
+                <div className="max-w-md">
+                <h1 className="text-5xl font-bold">Hello there</h1>
+                <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                <div className="flex justify-center items-center">
+                    <Link href='/industry'>
+                        <button className="btn bg-pink-500 text-white hover:bg-pink-700">Start</button>
+                    </Link>
+                </div>
+                </div>
+            </div>
         </div>
-
-        <div className="cloud_2">
-          <div className="cloud"></div>
-        </div>
-
-        <div className="cloud_3">
-          <div className="cloud"></div>
-        </div>
-
-        <div className="cloud_4">
-          <div className="cloud"></div>
-        </div>
-
-        <div className="cloud_5">
-          <div className="cloud"></div>
-        </div>
-      </div>
-      <div className="main w-screen h-screen flex flex-col justify-center items-center text-white">
-        Select an Industry
-      </div>
-    </div>
-  )
+    );
 }

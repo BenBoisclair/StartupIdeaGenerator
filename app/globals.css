@@ -80,3 +80,25 @@
     top: 100px;
   }
 }
+
+#buttons button {
+  background-color: #250B92;
+}
+
+#buttons button:hover {
+  color: white;
+}
+
+.btn {
+  border: none;
+}
+
+.btn-active {
+  border: white 3px solid;
+  color: white;
+}
+
+.selected {
+  border: solid white 4px;
+  color: white;
+}
